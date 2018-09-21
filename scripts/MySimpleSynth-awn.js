@@ -10,7 +10,8 @@ class MySimpleSynthController extends WAMController
   }
 
   static importScripts (actx) {
-    var origin = location.origin + "/";
+    //var origin = location.origin + "/";
+    var origin = "https://kunstmusik.github.io/iplug_study/"
     return new Promise( (resolve) => {
       actx.audioWorklet.addModule(origin + "scripts/MySimpleSynth-WAM.wasm.js").then(() => {
       actx.audioWorklet.addModule(origin + "scripts/MySimpleSynth-WAM.js").then(() => {
